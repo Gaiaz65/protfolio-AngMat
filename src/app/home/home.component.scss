@@ -1,0 +1,38 @@
+*{
+  color: white;
+}
+
+.title{
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 40px;
+}
+
+
+.flexcontainer{
+  padding: 20px 40px;
+  display: flex;
+}
+
+.side{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 20px;
+}
+
+.statistics {
+  display: flex;
+  gap: 20px;
+
+  &__item-title{
+    font-size: 50px;
+    margin: 5px;
+  }
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
