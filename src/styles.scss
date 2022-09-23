@@ -1,4 +1,5 @@
 
+
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
@@ -41,5 +42,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
 
 
 @import 'swiper/scss';
-@import 'swiper/scss/navigation';
-@import 'swiper/scss/pagination';
+@import 'swiper/css/autoplay';
+@import "~swiper/css/navigation";
+@import "swiper/css/effect-fade";
+
+
+
+
+

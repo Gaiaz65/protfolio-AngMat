@@ -13,7 +13,10 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { NavigationComponent } from './navigation/navigation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SwiperComponent } from './shared/swiper/swiper.component';
+import { ImageSliderComponent } from './shared/image-slider/image-slider.component';
+import { ImagesComponent } from './shared/image-slider/images/images.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { SwiperComponent } from './shared/swiper/swiper.component';
     ProjectsComponent,
     ProjectComponent,
     ResumeComponent,
-    SwiperComponent,
+    ImageSliderComponent,
+    ImagesComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -34,6 +39,7 @@ import { SwiperComponent } from './shared/swiper/swiper.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     SwiperModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

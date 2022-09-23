@@ -1,0 +1,31 @@
+swiper {
+  max-height: 600px;
+  padding: 30px;
+  background: linear-gradient(180deg, rgb(0, 0, 0), rgba(255, 255, 255, 0) 100%);
+}
+
+
+fa-icon {
+background-color: white;
+}
+
+.gradientbot {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: 0px;
+  background: linear-gradient(360deg, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0) 100%);
+  z-index: 100;
+
+}
+
+
+.gradienttop{
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 0px;
+  background: linear-gradient(360deg,  rgba(255, 255, 255, 0),rgba(0, 0, 0, 1) 100%);
+  z-index: 100;
+
+}

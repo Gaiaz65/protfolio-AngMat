@@ -10,7 +10,7 @@
 
 
 .flexcontainer{
-  padding: 20px 40px;
+  padding: 0px 40px;
   display: flex;
 }
 
@@ -32,7 +32,30 @@
 }
 
 .bottom {
+
+  width: 100% ;
+ &__container {
   display: flex;
   justify-content: space-between;
-  padding: 40px;
+  padding: 5px 20px;
+ }
+
+ &__social {
+   display: flex;
+   gap: 10px;
+   align-items: flex-end;
+ }
+}
+
+.side {
+  position: relative;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+fa-icon {
+  &:hover {
+    transition: 0.5s;
+  color: rgb(72, 200, 226);;
+  }
 }

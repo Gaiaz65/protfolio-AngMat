@@ -1,0 +1,62 @@
+.box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 20px;
+  margin: 15px;
+}
+
+fa-icon {
+  &:hover {
+    transition: 1s;
+    color: rgb(190, 83, 69);
+  }
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  gap: 10px;
+}
+
+
+.purple {
+  &:hover {
+    color: #712cf9
+  }
+}
+
+.blue {
+  &:hover {
+    color: rgb(72, 200, 226);
+  }
+}
+
+.yellow {
+  &:hover {
+    color: #f7df1e;
+  }
+}
+
+.orange {
+  &:hover {
+    color: #e34f26;
+  }
+}
+
+.grey {
+  &:hover {
+      color: grey ;
+    }
+}
+
+.pink {
+  &:hover {
+    color:  #f09;
+  }
+}
+
+
