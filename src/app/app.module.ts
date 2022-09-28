@@ -8,6 +8,11 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SwiperModule } from 'swiper/angular';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+;
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ImageSliderComponent } from './shared/image-slider/image-slider.component';
 import { ImagesComponent } from './shared/image-slider/images/images.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { environment } from 'src/environments/environment';
 
 
 @NgModule({
@@ -32,8 +38,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ResumeComponent,
     ImageSliderComponent,
     ImagesComponent,
-    ListComponent
-
+    ListComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +47,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserAnimationsModule,
     SwiperModule,
     FontAwesomeModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireStorageModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
