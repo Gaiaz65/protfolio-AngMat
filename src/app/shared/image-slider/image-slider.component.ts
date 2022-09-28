@@ -20,7 +20,7 @@ export class ImageSliderComponent {
   config: SwiperOptions = {
     slidesPerView: 1,
     loop: true,
-    spaceBetween: 50,
+    spaceBetween: 140,
     direction: 'vertical',
   };
   onSwiper(swiper: any) {

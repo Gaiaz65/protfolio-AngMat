@@ -1,0 +1,33 @@
+* {
+  color: white;
+}
+
+.project {
+  &__body {
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 200px;
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  }
+
+
+  &__img {}
+
+  &__title {
+    position: absolute;
+  }
+
+  &__subtitle {}
+
+  &__social {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+
+  &_social-icon {}
+}

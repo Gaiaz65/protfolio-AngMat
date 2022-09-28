@@ -1,3 +1,4 @@
+import { ListComponent } from './projects/list/list.component';
 import { ResumeComponent } from './resume/resume.component';
 import { ProjectComponent } from './projects/list/project/project.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -31,6 +32,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ResumeComponent,
     ImageSliderComponent,
     ImagesComponent,
+    ListComponent
 
   ],
   imports: [
