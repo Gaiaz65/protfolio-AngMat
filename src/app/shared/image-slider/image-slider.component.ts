@@ -1,6 +1,7 @@
 
-import { Component, OnInit } from '@angular/core';
-import SwiperCore, { SwiperOptions, EffectFade, Autoplay } from 'swiper';
+import { Component } from '@angular/core';
+
+import { SwiperOptions } from 'swiper';
 
 
 @Component({
@@ -22,10 +23,14 @@ export class ImageSliderComponent {
   config: SwiperOptions = {
     slidesPerView: 1,
     loop: true,
+    allowTouchMove: false,
+    effect: 'fade',
     direction: 'horizontal',
     breakpoints: {
       751: {
         slidesPerView: 1,
+        effect: 'fade',
+        allowTouchMove: false,
         loop: true,
         direction: 'vertical',
       },
