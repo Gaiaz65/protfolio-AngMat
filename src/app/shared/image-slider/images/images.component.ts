@@ -18,24 +18,6 @@ import { SizeProp } from '@fortawesome/fontawesome-svg-core';
   styleUrls: ['./images.component.scss'],
 })
 export class ImagesComponent implements OnInit {
-  breakpoint:boolean = false
-  imageSize:SizeProp = '6x'
-
-  setInnerwidth () {
-    let innerwidth = window.innerWidth;
-
-    if(innerwidth<750) {
-      this.breakpoint = true;
-    } else {
-      this.breakpoint = false;
-    }
-    if (innerwidth<400) {
-      this.imageSize = "4x"
-    }else {
-      this.imageSize = "6x";
-    }
-  }
-
   iconsTech = [
     faAngular,
     faJs,
@@ -64,8 +46,26 @@ export class ImagesComponent implements OnInit {
   html = faHtml5;
   trello = faTrello;
   figma = faFigma;
-  gitHub = faGithub
+  gitHub = faGithub;
   constructor() {}
+
+  breakpoint: boolean = false;
+  imageSize: SizeProp = '6x';
+
+  setInnerwidth() {
+    let innerwidth = window.innerWidth;
+
+    if (innerwidth < 750) {
+      this.breakpoint = true;
+    } else {
+      this.breakpoint = false;
+    }
+    if (innerwidth < 400) {
+      this.imageSize = '2x';
+    } else {
+      this.imageSize = '6x';
+    }
+  }
 
   ngOnInit(): void {
     this.setInnerwidth();

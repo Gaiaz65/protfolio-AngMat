@@ -1,12 +1,13 @@
 <!-- angular -->
 
   <div class="box">
-    <div class="side">
-      <fa-icon *ngFor="let icon of iconsTech; let i = index" [icon]="icon" [size]="imageSize" [ngClass]="{
-                'blue': icon === css,
-                'yellow': icon === js,
-                'orange': icon === html,
-                'grey': icon === gitHub}"></fa-icon>
+    <div class="side" >
+        <fa-icon  *ngFor="let icon of iconsTech; let i = index" [icon]="icon" class="yellow" [size]="imageSize" [ngClass]="{
+                  'blue': icon == css,
+                  'yellow': icon === js,
+                  'orange': icon === html,
+                  'grey': icon === gitHub}"
+                  ></fa-icon>
     </div>
     <div class="side" (window:resize)="setInnerwidth()" [ngClass]="{'hidden':breakpoint }" >
       <fa-icon *ngFor="let icon of iconsSup; let i = index" [icon]="icon" size="6x" [ngClass]="{

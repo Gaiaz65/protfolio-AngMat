@@ -24,7 +24,7 @@ export class ImageSliderComponent {
     loop: true,
     direction: 'horizontal',
     breakpoints: {
-      740: {
+      751: {
         slidesPerView: 1,
         loop: true,
         direction: 'vertical',

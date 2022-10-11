@@ -5,17 +5,13 @@
   gap: 20px;
   margin: 15px;
   min-height: 100vh;
-  @media (max-width:740px) {
-      min-height: fit-content;
-    }
-}
 
-fa-icon {
-  &:hover {
-    transition: 1s;
-    color: rgb(190, 83, 69);
+  @media (max-width:750px) {
+    min-height: fit-content;
   }
 }
+
+
 
 .side {
   display: flex;
@@ -23,6 +19,7 @@ fa-icon {
   align-items: center;
   overflow: hidden;
   gap: 10px;
+
   @media (max-width:750px) {
     flex-direction: row;
   }
@@ -45,6 +42,7 @@ fa-icon {
   &:hover {
     color: #f7df1e;
   }
+
 }
 
 .orange {
@@ -55,13 +53,13 @@ fa-icon {
 
 .grey {
   &:hover {
-      color: grey ;
-    }
+    color: grey;
+  }
 }
 
 .pink {
   &:hover {
-    color:  #f09;
+    color: #f09;
   }
 }
 
