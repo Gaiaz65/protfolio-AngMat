@@ -11,7 +11,6 @@ import { ProjectService } from 'src/app/services/project.service';
 })
 export class ListComponent implements OnInit {
   projects: Project[] = [
-
   ];
 
   constructor(private prService: ProjectService) {
