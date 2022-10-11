@@ -2,6 +2,10 @@
   color: white;
 }
 
+section {
+  height: 100vh;
+}
+
 .title{
   font-size: 36px;
   font-weight: 800;
@@ -12,6 +16,11 @@
 .flexcontainer{
   padding: 0px 40px;
   display: flex;
+  height: 100vh;
+  padding-top: 3rem;
+  @media (max-width:750px) {
+    flex-direction: column;
+  }
 }
 
 .side{
@@ -34,6 +43,9 @@
 .bottom {
 
   width: 100% ;
+  position: absolute;
+  left: 0;
+  bottom: 1rem;
  &__container {
   display: flex;
   justify-content: space-between;

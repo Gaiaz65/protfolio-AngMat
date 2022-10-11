@@ -6,13 +6,15 @@ import SwiperCore, { SwiperOptions, EffectFade, Autoplay } from 'swiper';
 @Component({
   selector: 'app-image-slider',
   template: `
-    <div class="gradienttop"></div>
-    <swiper [config]="config" (swiper)="onSwiper($event)">
-      <ng-template swiperSlide>
-        <app-images></app-images>
-      </ng-template>
-    </swiper>
-    <div class="gradientbot"></div>
+    <section>
+      <div class="gradienttop"></div>
+      <swiper [config]="config" (swiper)="onSwiper($event)">
+        <ng-template swiperSlide>
+          <app-images></app-images>
+        </ng-template>
+      </swiper>
+      <div class="gradientbot"></div>
+    </section>
   `,
   styleUrls: ['./image-slider.component.scss'],
 })
@@ -20,12 +22,18 @@ export class ImageSliderComponent {
   config: SwiperOptions = {
     slidesPerView: 1,
     loop: true,
-    spaceBetween: 140,
-    direction: 'vertical',
+    direction: 'horizontal',
+    breakpoints: {
+      740: {
+        slidesPerView: 1,
+        loop: true,
+        direction: 'vertical',
+      },
+    },
   };
   onSwiper(swiper: any) {
     setInterval(() => {
-      swiper.slideNext(50000);
+      swiper.slideNext(40000);
     }, 0);
   }
 }

@@ -1,5 +1,4 @@
 import { ListComponent } from './projects/list/list.component';
-import { ResumeComponent } from './resume/resume.component';
 import { ProjectComponent } from './projects/list/project/project.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SidebarComponent } from './navigation/sidebar/sidebar.component';
@@ -35,7 +34,6 @@ import { environment } from 'src/environments/environment';
     SidebarComponent,
     ProjectsComponent,
     ProjectComponent,
-    ResumeComponent,
     ImageSliderComponent,
     ImagesComponent,
     ListComponent,

@@ -1,19 +1,20 @@
-<div class="project__body">
-  <div class="project__img">
-  </div>
-  <img [src]="project.img" alt="log">
-  <h2 class="project__title">
-    {{project.title}}
-  </h2>
-  <h4 class="project__subtitle">{{project.subtitle}}</h4>
+  <mat-card>
+    <mat-card-content>
+      <img mat-card-image [src]="project.img"  alt="src/assets/images/no-image.jpg">
+      <div class="project__links">
+        <a  [href]="project.gitLink" target="_blank">
+          <fa-icon [icon]="faGithub" size="xl"></fa-icon>
+        </a>
+        <a  [href]="project.projectLink" target="_blank">
+          <fa-icon [icon]="faLink" size="xl"></fa-icon>
+        </a>
+      </div>
+    </mat-card-content>
+    <mat-card-title>{{project.title}}</mat-card-title>
+    <mat-card-content>
 
-  <div class="project__social">
-    <a class="project_social-icon" [href]="project.gitLink">
-      <fa-icon [icon]="faGithub" size="1x" ></fa-icon>
-    </a>
-    <a class="project_social-icon" [href]="project.projectLink">
-      <fa-icon [icon]="faLink" size="1x"></fa-icon>
-    </a>
-  </div>
-</div>
+      <mat-card-subtitle>{{project.subtitle}}</mat-card-subtitle>
+      <button mat-raised-button color="primary" routerLink="">See more</button>
+    </mat-card-content>
+  </mat-card>
 

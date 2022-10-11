@@ -10,8 +10,7 @@ import { ProjectService } from 'src/app/services/project.service';
   styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
-  projects: Project[] = [
-  ];
+  projects: Project[] = [];
 
   constructor(private prService: ProjectService) {
     this.projects = this.prService.projects
