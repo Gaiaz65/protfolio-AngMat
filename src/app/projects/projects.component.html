@@ -1,22 +1,27 @@
-<h1>Projects</h1>
-  <mat-card>
-    <mat-card-content>
-      <img mat-card-image [src]="projects[1].img" alt="src/assets/images/no-image.jpg">
-      <!-- <div class="project__links">
-        <a [href]="projects[1].gitLink" target="_blank">
-          <fa-icon [icon]="faGithub" size="xl"></fa-icon>
-        </a>
-        <a [href]="projects[1].projectLink" target="_blank">
-          <fa-icon [icon]="faLink" size="xl"></fa-icon>
-        </a>
-      </div> -->
-    </mat-card-content>
-    <mat-card-title>{{projects[1].title}}</mat-card-title>
-    <mat-card-content>
+<mat-card  (window:resize)="innerwidthCheck()" [ngStyle]="{'background-image':breakpoint ===true ? 'url(' + project.images + ')' : 'none','background-size':'cover'
+}">
 
-      <mat-card-subtitle>{{projects[1].subtitle}}</mat-card-subtitle>
-      <button mat-raised-button color="primary" routerLink="">See more</button>
-    </mat-card-content>
-  </mat-card>
+  <mat-card-content>
+    <mat-card-title>{{project.title}}</mat-card-title>
+    <p><strong>Description:</strong> {{project.description}}</p>
+    <div class="project">
+      <ul class="project_tasks">
+        <li *ngFor="let task of project.tasks">{{task}}</li>
+      </ul>
+    </div>
+  </mat-card-content>
+  <div class="project__links">
+    <a [href]="project.gitLink" target="_blank" *ngIf="project.gitLink">
+      <fa-icon [icon]="faGithub" [size]="imageSize"></fa-icon>
+    </a>
+    <a [href]="project.projectLink" target="_blank" *ngIf="project.projectLink">
+      <fa-icon [icon]="faLink" [size]="imageSize"></fa-icon>
+    </a>
+  </div>
+  <div class="images__technologies">
+    <img *ngFor="let technology of project.technologies; let i = index" [src]="technology" alt="">
+  </div>
+
+</mat-card>
 
 <app-project-list [projects]="projects"></app-project-list>

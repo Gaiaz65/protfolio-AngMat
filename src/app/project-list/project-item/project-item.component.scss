@@ -3,56 +3,56 @@ mat-card {
   display: inline-block;
   position: relative;
   background-color: black;
-  border: 1px solid white;
-  width: 30rem;
+
 
   &:hover {
     box-shadow: 0px 0px 40px rgb(255, 255, 255);
     transform: scale(1.05);
     z-index: 10;
   }
+
+     @media (width< 800px) {
+      &:hover {
+          box-shadow:none;
+        }
+     }
+
 }
 
 mat-card-subtitle {
   color: white;
   min-height: 3rem;
+  max-height: 3rem;
+  @media (width< 450px) {
+    display: none;
+  }
 }
 
 mat-card-content {
   display: flex;
   flex-direction: column;
   flex: 1;
-  height: 50%;
   position: relative;
   background-color: black;
 
   &>img {
-    object-fit: scale-down;
     border: 1px solid rgba(128, 128, 128, 0.36);
     border-radius: 5px;
-    height: 15.5rem;
+    min-width: 10rem;
+    min-height: 6rem;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
   }
 }
 
-mat-spinner {
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+mat-card-title {
+    @media (width< 450px) {
+        font-size: 1rem;
+        text-align: center;
+      }
 }
 
-.project {
-
-  &__links {
-    position: absolute;
-    display: flex;
-    gap: 0.5rem;
-    right: 0;
-    bottom: 10%;
-  }
-}
 
 button {
   justify-self: flex-end;

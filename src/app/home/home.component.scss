@@ -2,6 +2,7 @@
   color: white;
 }
 
+
 .title {
   font-size: 36px;
   font-weight: 800;
@@ -23,8 +24,8 @@
 .flexcontainer {
   padding: 0px 40px;
   display: flex;
-  height: 100vh;
   padding-top: 3rem;
+  overflow: hidden;
 
   @media (max-width:750px) {
     flex-direction: column;

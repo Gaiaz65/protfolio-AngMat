@@ -1,20 +1,12 @@
   <mat-card>
     <mat-card-content>
       <img mat-card-image [src]="project.img"  alt="src/assets/images/no-image.jpg">
-      <div class="project__links">
-        <a  [href]="project.gitLink" target="_blank">
-          <fa-icon [icon]="faGithub" size="xl"></fa-icon>
-        </a>
-        <a  [href]="project.projectLink" target="_blank">
-          <fa-icon [icon]="faLink" size="xl"></fa-icon>
-        </a>
-      </div>
     </mat-card-content>
     <mat-card-title>{{project.title}}</mat-card-title>
     <mat-card-content>
 
       <mat-card-subtitle>{{project.subtitle}}</mat-card-subtitle>
-      <button mat-raised-button color="primary" routerLink="">See more</button>
+      <button mat-raised-button color="accent" routerLink="">About project</button>
     </mat-card-content>
   </mat-card>
 

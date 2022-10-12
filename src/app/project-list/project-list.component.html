@@ -1,3 +1,10 @@
-<div class="project__list">
+<!-- <div class="project__list">
   <app-project-item *ngFor="let project of projects" [project]="project"></app-project-item>
-</div>
+</div> -->
+
+<swiper
+[config]="config"
+ class="mySwiper"
+  (swiper)="onSwiper($event)">
+  <ng-template swiperSlide *ngFor="let project of projects"><app-project-item [project]="project"></app-project-item></ng-template>
+</swiper>`

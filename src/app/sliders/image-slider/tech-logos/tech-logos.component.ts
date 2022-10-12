@@ -38,7 +38,6 @@ export class TechLogosComponent implements OnInit {
   ];
 
   bootstrap = faBootstrap;
-
   css = faCss3;
   jira = faJira;
   docker = faDocker;

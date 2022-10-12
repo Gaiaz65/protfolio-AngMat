@@ -1,6 +1,10 @@
 
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import Project from 'src/app/model/project';
+
+
+import SwiperCore, { Pagination, Navigation, SwiperOptions } from 'swiper';
+SwiperCore.use([Pagination, Navigation]);
 
 
 
@@ -9,12 +13,29 @@ import Project from 'src/app/model/project';
   templateUrl: './project-list.component.html',
   styleUrls: ['./project-list.component.scss'],
 })
-export class ProjectListComponent implements OnInit {
+export class ProjectListComponent {
   @Input() projects: Project[] = [];
 
-  constructor() {
+  config: SwiperOptions = {
+    slidesPerView: 2,
+    loop: true,
+    breakpoints: {
+      751: {
+        slidesPerView: 3,
+        loop: true,
+      },
+      450: {
+        slidesPerView: 2,
+        loop: true,
+      },
+    },
+  };
 
+  constructor() {}
+
+  onSwiper(swiper: any) {
+    setInterval(() => {
+      swiper.slideNext(5000);
+    }, 0);
   }
-
-  ngOnInit(): void {}
 }
