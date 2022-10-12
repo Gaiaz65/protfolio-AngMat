@@ -1,3 +1,22 @@
-<h1>Projects list</h1>
-<hr>
-<app-list></app-list>
+<h1>Projects</h1>
+  <mat-card>
+    <mat-card-content>
+      <img mat-card-image [src]="projects[1].img" alt="src/assets/images/no-image.jpg">
+      <!-- <div class="project__links">
+        <a [href]="projects[1].gitLink" target="_blank">
+          <fa-icon [icon]="faGithub" size="xl"></fa-icon>
+        </a>
+        <a [href]="projects[1].projectLink" target="_blank">
+          <fa-icon [icon]="faLink" size="xl"></fa-icon>
+        </a>
+      </div> -->
+    </mat-card-content>
+    <mat-card-title>{{projects[1].title}}</mat-card-title>
+    <mat-card-content>
+
+      <mat-card-subtitle>{{projects[1].subtitle}}</mat-card-subtitle>
+      <button mat-raised-button color="primary" routerLink="">See more</button>
+    </mat-card-content>
+  </mat-card>
+
+<app-project-list [projects]="projects"></app-project-list>

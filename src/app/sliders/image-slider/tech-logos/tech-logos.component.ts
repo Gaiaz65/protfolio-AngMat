@@ -13,11 +13,11 @@ import { faPrescription } from '@fortawesome/free-solid-svg-icons';
 import { faGitAlt } from '@fortawesome/free-brands-svg-icons';
 import { SizeProp } from '@fortawesome/fontawesome-svg-core';
 @Component({
-  selector: 'app-images',
-  templateUrl: './images.component.html',
-  styleUrls: ['./images.component.scss'],
+  selector: 'app-tech-logos',
+  templateUrl: './tech-logos.component.html',
+  styleUrls: ['./tech-logos.component.scss'],
 })
-export class ImagesComponent implements OnInit {
+export class TechLogosComponent implements OnInit {
   iconsTech = [
     faAngular,
     faJs,

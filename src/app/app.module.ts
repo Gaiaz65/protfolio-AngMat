@@ -1,7 +1,6 @@
-import { ListComponent } from './projects/list/list.component';
-import { ProjectComponent } from './projects/list/project/project.component';
+import { ProjectListComponent } from './project-list/project-list.component';
+import { ProjectItemComponent } from './project-list/project-item/project-item.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { SidebarComponent } from './navigation/sidebar/sidebar.component';
 import { HomeComponent } from './home/home.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { NgModule } from '@angular/core';
@@ -18,10 +17,11 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { NavigationComponent } from './navigation/navigation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ImageSliderComponent } from './shared/image-slider/image-slider.component';
-import { ImagesComponent } from './shared/image-slider/images/images.component';
+import { ImageSliderComponent } from './sliders/image-slider/image-slider.component';
+import { TechLogosComponent } from './sliders/image-slider/tech-logos/tech-logos.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { environment } from 'src/environments/environment';
+
 
 
 @NgModule({
@@ -31,12 +31,12 @@ import { environment } from 'src/environments/environment';
     ContactsComponent,
     HomeComponent,
     NavigationComponent,
-    SidebarComponent,
     ProjectsComponent,
-    ProjectComponent,
+    ProjectItemComponent,
     ImageSliderComponent,
-    ImagesComponent,
-    ListComponent,
+    TechLogosComponent,
+    ProjectListComponent,
+
   ],
   imports: [
     BrowserModule,

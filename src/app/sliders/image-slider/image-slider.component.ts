@@ -11,7 +11,7 @@ import { SwiperOptions } from 'swiper';
       <div class="gradienttop"></div>
       <swiper [config]="config" (swiper)="onSwiper($event)">
         <ng-template swiperSlide>
-          <app-images></app-images>
+          <app-tech-logos></app-tech-logos>
         </ng-template>
       </swiper>
       <div class="gradientbot"></div>
