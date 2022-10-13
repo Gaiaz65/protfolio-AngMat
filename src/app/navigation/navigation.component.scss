@@ -22,6 +22,9 @@ a {
   :focus {
     color: grey;
   }
+  @media (width<500px) {
+    font-size: 1.5rem;
+  }
 }
 
 svg {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { SizeProp } from '@fortawesome/fontawesome-svg-core';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
@@ -11,7 +11,7 @@ import { ProjectService } from '../services/project.service';
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements OnInit {
-  project!: Project;
+  @Input() project!: Project;
   projects: Project[] = [];
   breakpoint!: boolean;
   imageSize: SizeProp = '3x';
@@ -20,7 +20,6 @@ export class ProjectsComponent implements OnInit {
 
   constructor(private prService: ProjectService) {
     this.projects = this.prService.projects;
-    this.project = this.projects[2];
   }
 
   innerwidthCheck() {
@@ -40,5 +39,6 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.innerwidthCheck();
+    this.prService.shownPr.subscribe((res) => this.project = res);
   }
 }

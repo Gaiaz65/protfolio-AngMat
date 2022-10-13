@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { BehaviorSubject, Observable } from 'rxjs';
 import Project from '../model/project';
 
 @Injectable({
@@ -9,15 +10,12 @@ import Project from '../model/project';
 export class ProjectService {
   projects: Project[] = [
     {
+      title: 'Game Platform',
       img: 'https://github.com/Gaiaz65/GamePlatform/blob/master/src/assets/RepIMG/4.png?raw=true',
-      images: [
-        'https://github.com/Gaiaz65/GamePlatform/blob/master/src/assets/RepIMG/videoPic.jpeg?raw=true',
-      ],
+      images: ['./assets/bg/videoPic.jpeg'],
       description:
         'Video platform with the ability to upload and play videos. It uses FireBase as the main DataBase, Tailwind as the main source of styles.',
-      title: 'Game Platform',
-      subtitle:
-        'Teaser platrom with videos,Teaser platrom with videos,Teaser platrom with videos,Teaser platrom with videos',
+      subtitle: 'Teaser platrom with videos.',
       gitLink: 'https://github.com/Gaiaz65/GamePlatform',
       projectLink: 'https://teaserousvi-git-master-gaiaz65.vercel.app/',
       technologies: [
@@ -35,12 +33,10 @@ export class ProjectService {
       ],
     },
     {
+      title: 'Job guru',
       img: 'https://github.com/Gaiaz65/GamePlatform/blob/master/src/assets/RepIMG/4.png?raw=true',
-      images: [
-        'https://github.com/Gaiaz65/GamePlatform/blob/master/src/assets/RepIMG/videoPic.jpeg?raw=true',
-      ],
-      title: 'Game Platform',
-      subtitle: 'Teaser platrom with videos',
+      images: ['./assets/bg/jobguru.jpg'],
+      subtitle: 'Platform for vacancies',
       description:
         'Video platform with the ability to upload and play videos. It uses FireBase as the main DataBase, Tailwind as the main source of styles.',
       gitLink: 'https://github.com/Gaiaz65/GamePlatform',
@@ -60,12 +56,10 @@ export class ProjectService {
       ],
     },
     {
+      title: 'Delivery platform',
       img: 'https://github.com/Gaiaz65/GamePlatform/blob/master/src/assets/RepIMG/4.png?raw=true',
-      images: [
-        'https://github.com/Gaiaz65/GamePlatform/blob/master/src/assets/RepIMG/videoPic.jpeg?raw=true',
-      ],
-      title: 'Game Platform',
-      subtitle: 'Teaser platrom with videos',
+      images: ['./assets/bg/delivery.jpg'],
+      subtitle: 'Delivery box to lauch online sales',
       description:
         'Video platform with the ability to upload and play videos. It uses FireBase as the main DataBase, Tailwind as the main source of styles.',
       gitLink: 'https://github.com/Gaiaz65/GamePlatform',
@@ -85,11 +79,17 @@ export class ProjectService {
       ],
     },
   ];
+  shownPr = new BehaviorSubject<Project>(this.projects[1]);
 
   constructor(
     private db: AngularFirestore,
     private storage: AngularFireStorage
   ) {}
+
+  showProjectDetails(project: Project) {
+    let index = this.projects.indexOf(project);
+    this.shownPr.next(this.projects[index])
+  }
 
   addToDb() {}
 }
